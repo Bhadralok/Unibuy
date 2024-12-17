@@ -11,7 +11,7 @@ export default function Header({ isLoginPage }) {
         <Logo />
         <div className="flex gap-10 font-semibold items-center">
           <CustomNavBar to="/">Home</CustomNavBar>
-          <CustomNavBar to="">Contact</CustomNavBar>
+          <CustomNavBar to="/contact">Contact</CustomNavBar>
           <CustomNavBar to="">About</CustomNavBar>
           <CustomNavBar to="/signup">Sign Up</CustomNavBar>
         </div>
@@ -19,15 +19,18 @@ export default function Header({ isLoginPage }) {
           <CustomInput
             placeholder="What are you looking for?"
             icon={<RiSearchLine size={24} />}
+            to="/home"
           />
           {!isLoginPage && (
             <div className="flex items-center gap-6">
               <span>
                 <CiHeart size={32} />
               </span>
-              <span>
-                <CiShoppingCart size={32} />
-              </span>
+              <CustomNavBar to="/cart">
+                <span>
+                  <CiShoppingCart size={32} />
+                </span>
+              </CustomNavBar>
             </div>
           )}
         </div>

@@ -10,15 +10,16 @@ export default function Header() {
         <Logo />
         <div className="flex gap-10 font-semibold items-center">
           <CustomNavBar to="/">Home</CustomNavBar>
-          <CustomNavBar to="">Contact</CustomNavBar>
+          <CustomNavBar to="/contact">Contact</CustomNavBar>
           <CustomNavBar to="">About</CustomNavBar>
           <CustomNavBar to="/signup">Sign Up</CustomNavBar>
         </div>
         <div className="flex items-center gap-6">
-          <CustomInput
+        <CustomInput
             placeholder="What are you looking for?"
             text={true}
             type="login"
+            to="/"
             icon={<RiSearchLine size={24} />}
           />
         </div>

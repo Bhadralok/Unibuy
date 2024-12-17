@@ -6,6 +6,7 @@ export default {
       colors: {
         brandRed: "#DB4444",
         brandLightRed: "#E7A2A2",
+        brandGrey: "#828282"
       }
     },
   },

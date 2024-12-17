@@ -4,7 +4,9 @@ import Home from "./Pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./Components/AppLayout";
 import AuthLayout from "./Components/LoginLayout.jsx";
-
+import Sent from "./Pages/Sent.jsx";
+import Contact from "./Pages/Contact.jsx";
+import Cart from "./Pages/Cart.jsx"
 export default function App() {
   const router = createBrowserRouter([
     {
@@ -15,6 +17,14 @@ export default function App() {
           index: true,
           element: <Home />,
         },
+        {
+          path: "contact",
+          element: <Contact />
+        },
+        {
+          path: "cart",
+          element: <Cart />
+        }
       ],
     },
     {
@@ -36,6 +46,11 @@ export default function App() {
           element: <SignIn />
         }
       ],
+    },
+    {
+      path: "/sent",
+      element: <Sent />,
+
     }
     // {
     //   path: "admin",
